@@ -2,9 +2,9 @@ import Foundation
 import SimpleFunctional
 
 /// IO type for a simple web socket client.
-struct WebSocketClientIO: IO {
-    enum Input {
-        enum SocketEvent {
+public struct WebSocketClientIO: IO {
+    public enum Input {
+        public enum SocketEvent {
             case didOpen
             case didClose
             case receivedBytes([UInt8])
@@ -15,13 +15,13 @@ struct WebSocketClientIO: IO {
         case socketUpdated(id: UInt, event: SocketEvent)
     }
     
-    enum Output {
+    public enum Output {
         case createAndOpenSocket(config: SocketConfig)
         case closeSocket(id: UInt)
         case sendBytes(_ bytes: [UInt8], socketId: UInt)
     }
     
-    struct SocketConfig {
+    public struct SocketConfig {
         let hostname: String
         let port: Int?
         let authorizationHeader: String?
@@ -31,7 +31,7 @@ struct WebSocketClientIO: IO {
 
 // MARK: - Helpers
 
-extension WebSocketClientIO.SocketConfig: Equatable {
+public extension WebSocketClientIO.SocketConfig: Equatable {
     static func create(hostname: String,
                        port: Int? = nil,
                        authorizationHeader: String? = nil) -> Self {

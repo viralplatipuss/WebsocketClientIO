@@ -7,10 +7,9 @@ import WebSocket
 
  This is not thread-safe. handle(output:) should be called in-order on the same thread.
  */
-final class WebSocketClientIOHandler: BaseIOHandler<WebSocketClientIO> {
-    typealias IOType = WebSocketClientIO
+public final class WebSocketClientIOHandler: BaseIOHandler<WebSocketClientIO> {
     
-    override func handle(output: Output) {
+    public override func handle(output: Output) {
         switch output {
         case let .createAndOpenSocket(config):
             let id = nextId
