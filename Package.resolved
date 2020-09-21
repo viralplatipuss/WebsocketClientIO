@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SimpleFunctional",
+        "repositoryURL": "https://github.com/viralplatipuss/SimpleFunctional.git",
+        "state": {
+          "branch": null,
+          "revision": "a07a173d3134f080b9fb72e9f391a8d6f37b2775",
+          "version": "0.0.10"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
