@@ -31,7 +31,7 @@ public struct WebSocketClientIO: IO {
 
 // MARK: - Helpers
 
-extension WebSocketClientIO.SocketConfig: Equatable {
+public extension WebSocketClientIO.SocketConfig: Equatable {
     static func create(hostname: String,
                        port: Int? = nil,
                        authorizationHeader: String? = nil) -> Self {
