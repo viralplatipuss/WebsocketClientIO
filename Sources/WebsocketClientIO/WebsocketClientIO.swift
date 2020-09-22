@@ -21,7 +21,7 @@ public struct WebSocketClientIO: IO {
         case sendBytes(_ bytes: [UInt8], socketId: UInt)
     }
     
-    public struct SocketConfig {
+    public struct SocketConfig: Equatable {
         let hostname: String
         let port: Int?
         let authorizationHeader: String?
@@ -31,7 +31,7 @@ public struct WebSocketClientIO: IO {
 
 // MARK: - Helpers
 
-public extension WebSocketClientIO.SocketConfig: Equatable {
+public extension WebSocketClientIO.SocketConfig {
     static func create(hostname: String,
                        port: Int? = nil,
                        authorizationHeader: String? = nil) -> Self {
