@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "WebsocketClientIO", targets: ["WebsocketClientIO"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/viralplatipuss/SimpleFunctional.git", .exact("0.0.10")),
+        .package(url: "https://github.com/viralplatipuss/SimpleFunctional.git", .exact("0.0.11")),
         .package(url: "https://github.com/vapor/websocket-kit.git", .exact("1.1.2")),
     ],
     targets: [
